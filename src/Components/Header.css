@@ -1,0 +1,39 @@
+.head{
+    display: flex;
+    color: orange;
+    justify-content: space-between;
+    margin: 50px 160px;
+    font-weight: 600;
+}
+.head a{
+    text-decoration: none;
+    position: relative;
+    top: 22px;
+    font-weight: 600;
+}
+.head button{
+    padding: 10px;
+    background-color: orange;
+    color: purple;
+    font-weight: 600;
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0 200px 0 200px;
+   color: purple;   
+
+}
+.main .briyani{
+    border: solid 2px ;
+    width: 150px;
+}
+.main .pizza{
+    border: solid 2px ;
+    width: 150px;
+}
+.main .shawarma{
+    border: solid 2px ;
+    width: 150px;
+}
