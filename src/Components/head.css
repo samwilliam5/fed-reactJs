@@ -1,0 +1,27 @@
+.wrapperHead{
+    display: flex;
+    justify-content: space-between;
+    margin: 70px 180px 0 180px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: orange;
+}
+
+.wrapperHead a{
+    position: relative;
+    bottom: 7px;
+    
+
+
+}
+
+.wrapperHead button{
+    padding: 10px;
+    color: orange;
+    font-weight: 600;
+    background-color: rebeccapurple;
+    border: solid 2px purple;
+
+
+ 
+}

@@ -1,25 +1,33 @@
-//root of components
-
-// import logo from './logo.svg';
-
+import logo from './logo.svg';
 import './App.css';
-import Header from './Components/Header';
-// import Items from "./Components/Items";
-
-// import Header from "./Components/Header";
-function App() {
-  
-  // var x=true;
-  return (// func returning jsXml code
+import Head from './Components/head';
+import Body from './Components/body';
+function App(props) {
+  var foods=[
+      {img:'',
+        name:'Pizza',
+      price:200,
+    },
+    {img:'',
+      name:'Briyani',
+    price:150,
+  },
+  {img:'',
+    name:'Shawarma',
+  price:100,
+},
+{img:'',
+  name:'Chicken 65',
+price:120,
+}
+  ];
+  return (
     <div className="App">
       <header className="App-header">
+        <Head></Head>
+        <Body food={foods}></Body>
+        
       </header>
-      <Header ></Header>
-      {/* <Header item={expenses}></Header> */}
-
-      
-      
-    
     </div>
   );
 }
