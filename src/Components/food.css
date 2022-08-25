@@ -1,28 +1,31 @@
-.wrapperFood{
+.wrapperFood {
     display: flex;
     justify-content: space-between;
-    margin: 100px 0 0 180px;
+    margin: 50px 0 0 100px;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
-    color: orange;
+    color: blue;
 }
-.wrapperFood .Pizza{
-    width: 120px;
-    height: 35vh;
+
+.wrapperFood .Pizza {
+    width: 200px;
+    height: 360px;
     border: solid 2px purple;
     font-size: larger;
-  
+
 }
-.wrapperFood button{
+
+a:hover{
+    color:orange
+}
+
+.wrapperFood button {
     border: solid 2px purple;
     font-weight: 600;
-    color: orange;
-    background-color: purple;
-
-  
 }
-.wrapperFood .price{
-   font-size: medium;
-  
+
+.wrapperFood .price {
+    font-size: medium;
+
 }

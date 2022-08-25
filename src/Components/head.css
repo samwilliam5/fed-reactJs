@@ -1,4 +1,4 @@
-.wrapperHead{
+.wrapperHead {
     display: flex;
     justify-content: space-between;
     margin: 70px 180px 0 180px;
@@ -7,15 +7,15 @@
     color: orange;
 }
 
-.wrapperHead a{
+.wrapperHead a {
     position: relative;
     bottom: 7px;
-    
+
 
 
 }
 
-.wrapperHead button{
+.wrapperHead button {
     padding: 10px;
     color: orange;
     font-weight: 600;
@@ -23,5 +23,5 @@
     border: solid 2px purple;
 
 
- 
+
 }
