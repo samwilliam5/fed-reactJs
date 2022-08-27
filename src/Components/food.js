@@ -13,7 +13,7 @@ function Food(props) {
                 <a>
                 <div className='Pizza'>
                     <img src={props.img} width={200} alt="This is food image" />
-                    <p>{props.name}</p>
+                    <p>{props.item}</p>
                     <p className='price'>{"Rs."}{price}</p>
                     <p className='offer'>{props.offer}{"% Offer"}</p>
 
