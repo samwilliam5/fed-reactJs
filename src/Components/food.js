@@ -25,4 +25,34 @@ function Food(props) {
     )
 
 }
+
+// class Collections extends Component {
+//     render() {
+//             const [price, setPrice] = useState(this.props.price)
+
+//      button() {
+//         let newprice = props.price - (props.offer/100)*props.price;
+//         this.setPrice(newprice);
+//     }
+//         return (
+//             <div>
+//                 <div className="collection-container">
+//                     <div className='item1'>
+//                         <div className='img'>
+//                             <img src={image} width={150} height={150}></img>
+//                         </div>
+//                         <div className='details'>
+//                             <h2>{this.props.item}</h2>
+//                             <p>{this.props.offer}{"%Offer"}</p>
+//                             <p>{"Rs."}{this.price}</p>
+//                             <p>{this.props.restaurant}</p>
+//                             <button onClick={this.state.button}>Apply Offer</button>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         );
+
+//     }
+// }
 export default Food;

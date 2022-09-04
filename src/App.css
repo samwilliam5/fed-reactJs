@@ -36,3 +36,39 @@
     transform: rotate(360deg);
   }
 } */
+
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  background-color: lightgray;
+  font-weight: 600;
+}
+button{
+  padding: 5px;
+}
+/* form{
+  border: solid 5px purple;
+  width: auto;
+  width: 40vh;
+  height: 30vh;
+  line-height: 2.5em;
+  position: relative;
+  left: 500px;
+  
+} */
+label{
+color: orange; 
+font-size: medium;
+
+}
+ button{
+  color: orange;
+  font-weight: 600;
+  background-color: purple;
+ }
+ form{
+  line-height: 2em;
+  align-items: center;
+ }
