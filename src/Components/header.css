@@ -1,0 +1,31 @@
+.container{
+    width: 80%;
+    margin: auto;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: orange;
+}
+.logo{
+    font-size: 30px;
+    color: orange;
+    align-items: center;
+    position: relative;
+    top: 33px;
+}
+.nav-bar{
+    padding: 20px;
+    margin-top: 32px;
+    font-size: 25px;
+    align-items: center;
+}
+.nav{
+    color: purple;
+    padding: 25px;
+}

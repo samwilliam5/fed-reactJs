@@ -1,4 +1,12 @@
-form{
-    text-align: center;
-    margin: 100px 0  0 0;
+.form h3{
+    color: purple;
+   margin-left: 400px;
+}
+.addNewfood{
+    line-height: 2em;
+ 
+}
+.addNewfood{
+    position: relative;
+    left: 400px;
 }

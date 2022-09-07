@@ -1,17 +1,21 @@
 import './App.css';
-import Head from './Components/head';
-import Body from './Components/body';
-
+import{ useState} from 'react';
+import Body from './components/body';
+import Header from './components/header';
+import Login from './components/login';
 
 function App() {
-  
+  const [isLoggedin,setLoggedIn]=useState(false);
+
+  const loginhandler=(islogin)=>{
+    setLoggedIn(islogin);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <Head></Head>
-        <Body ></Body>
-
-      </header>
+      <Header></Header>
+      {isLoggedin? <Body logout={loginhandler}></Body>:<Login isLoggedin={loginhandler}></Login>
+      }
     </div>
   );
 }

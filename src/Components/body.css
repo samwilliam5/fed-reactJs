@@ -1,9 +1,18 @@
-.food {
-    display: flex;
-    flex-wrap: wrap;
-
+.container button{
+    position: relative;
+   
+    
 }
-.Form{
-    margin: 100px 0 0 0;
-    text-align: center;
+.foodlist{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    width: 80%;
+    margin-left: 80px;
+    
+    
+}
+.container{
+    width: 80%;
 }
