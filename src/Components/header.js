@@ -1,4 +1,6 @@
 import './header.css';
+import {Outlet} from 'react-router-dom'
+
 
 function Header(){
     return(
@@ -17,6 +19,8 @@ function Header(){
                     </div>
                 </div>
             </div>
+            <Outlet></Outlet>
+
         </header>
     )
 }

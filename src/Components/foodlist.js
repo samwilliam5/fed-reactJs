@@ -1,5 +1,4 @@
 import React from 'react';
-import './foodlist.css';
 import Foods from './food';
 
 function FoodList(props){

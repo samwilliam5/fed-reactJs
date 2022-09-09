@@ -16,3 +16,27 @@ button:hover{
     color: orange;
 }
 
+.footer{
+    display: flex;
+    justify-content: space-between;
+    color: purple;
+    font-size: larger;
+}
+.footer h3{
+    position: relative;
+   left: 100px;
+   top: 50px;
+}
+.footer h4{
+    position: relative;
+   right: 100px;
+   top: 50px;
+   font-size: larger;
+}
+
+.footer h3:hover{
+    color: orange;
+}
+.footer h4:hover{
+    color: orange;
+}
