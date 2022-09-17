@@ -1,13 +1,24 @@
 .container{
-    width: 80%;
+    width: 100%;
     margin: auto;
+
 }
 .wrapper{
     display: flex;
     justify-content: space-between;
+    border: solid 3px purple;
+    margin-bottom: 15px;
+    background-color: lightblue  ;
+    
+
 }
-a{
+.nav-bar a{
     text-decoration: none;
+   position: relative;
+   right: 100px;
+   bottom: 8px;
+
+   
 }
 a:hover{
     color: orange;
@@ -28,4 +39,16 @@ a:hover{
 .nav{
     color: purple;
     padding: 25px;
+}
+.logo h2{
+    position: relative;
+    left: 100px;
+    bottom: 3px;
+   
+}
+ul{
+    list-style: none;
+}
+.nav-bar li{
+    display: inline-block;
 }

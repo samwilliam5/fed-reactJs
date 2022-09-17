@@ -61,12 +61,15 @@ function Form(props) {
         <div className="form">
             <h3>Add New Food</h3>
             <form type='login' className="addNewfood" onSubmit={subjectHandler}>
+                <fieldset>
+                    <legend></legend>
                 <input type="text" placeholder="Restaurant Name"  onChange={resHandler} value={addedform.restaurant}></input><br />
                 <input type="text" placeholder="Variety"  onChange={varHandler} value={addedform.variety}></input><br />
                 <input type="number" placeholder="Offers"  onChange={offHandler} value={addedform.offer}></input><br />
                 <input type="number" placeholder="Price" onChange={priHandler} value={addedform.price}></input><br />
                 <input type="number" placeholder="Ratings"  onChange={ratHandler} value={addedform.ratings}></input><br />
                 <button type="submit">Submit</button>
+                </fieldset>
             </form>
         </div>
     );

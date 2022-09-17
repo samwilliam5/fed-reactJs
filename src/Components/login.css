@@ -1,4 +1,27 @@
 .formlogin{
-    margin: 50px 0 0 550px ;
-    line-height: 1.5em;
+    text-align: center;
+    line-height: 2.5em;
+    margin-top: 20px;
+}
+.formlogin fieldset{
+    border:  solid 2px green;
+    height: 32vh;
+    background-color: lightgreen;
+}
+.foodback img{
+    width: 100%;
+}
+.FieldLogin{
+    width: 40%;
+    height: 35vh;
+    margin: auto;
+    border: solid 3px purple;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: lightgreen;
+}
+.FieldLogin legend{
+    color: purple;
+    font-size: x-large;
+    text-align: center;
 }

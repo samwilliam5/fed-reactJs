@@ -1,5 +1,88 @@
+
+
+import './login.css';
+import { useState,useEffect } from 'react';
+import images from './images/Food-Wallpapers-HD-For-Desktop.jpg'
+
+import {useNavigate} from 'react-router-dom';
+
+function Login(props){
+    var navi=useNavigate();
+    const[email,setEmail]=useState("");
+    const[password,setPassword]=useState("");
+    const[isvalid,setValid]=useState(false);
+
+    const login=(a)=>{
+        a.preventDefault();
+        localStorage.setItem("login",true);
+        props.isLoggedin(true);
+        navi('/header/logout')
+    }
+
+    useEffect(() => {
+        fetch('https://63146fb1fc9dc45cb4ed743a.mockapi.io/api/login').then((response)=>{
+            if(response.ok){
+                return response.json();
+            } 
+            return false;
+        }).then((response)=>{
+            if(response){
+                props.isLoggedin(false);
+            }
+        })
+    },[props]);
+
+    useEffect(()=>{
+        if((email.includes('@') && password.length > 5)){
+            setValid(true);
+        }
+
+},[email,password]);
+
+    useEffect(()=>{
+        return ()=> console.log('login is unmounted');   
+},[]);
+
+const emailHandler=(a)=>{
+    setEmail(a.target.value)
+}
+const passwordHandler=(a)=>{
+    setPassword(a.target.value)
+}
+
+
+return(
+    <div>
+        <div className='foodback'>
+        <img src={images} alt="This is food image"  />
+        </div>
+        <fieldset  className='FieldLogin'>
+            <legend>Welcome!</legend>
+    <form className='formlogin' onSubmit={login}>
+          
+        <label style={labelstyle}>USERNAME:</label>
+        <input type="email" placeholder="Enter Email or Username" onChange={emailHandler} value={email} required/><br />
+        <label style={labelstyle}>PASSWORD:</label>
+        <input type="password" placeholder="Enter Password" onChange={passwordHandler} value={password} required/><br /><br />
+        {isvalid?  <button type="submit" className='loginbtn' >Login</button>:  <button type="submit" disabled>Login</button>}
+        
+    </form>
+    </fieldset>
+    </div>
+
+);
+}
+
+const labelstyle={
+    color:'purple'
+}
+
+export default Login;
+
+
 // import { Component } from 'react';
 // import './login.css';
+
 
 
 
@@ -82,66 +165,3 @@
 // }
 
 // export default Login;
-
-
-import './login.css';
-import { useState,useEffect } from 'react';
-// import Body from './body';
-// import Form from './form';
-
-function Login(props){
-    const[email,setEmail]=useState("");
-    const[password,setPassword]=useState("");
-    const[isvalid,setValid]=useState(false);
-
-    const login=(a)=>{
-        a.preventDefault();
-        localStorage.setItem("login",true);
-        props.isLoggedin(true);
-    }
-
-    useEffect(() => {
-        fetch('https://63146fb1fc9dc45cb4ed743a.mockapi.io/api/login').then((response)=>{
-            if(response.ok){
-                return response.json();
-            } 
-            return false;
-        }).then((response)=>{
-            if(response){
-                props.isLoggedin(false);
-            }
-        })
-    },[props]);
-
-    useEffect(()=>{
-        if((email.includes('@') && password.length > 5)){
-            setValid(true);
-        }
-
-},[email,password]);
-
-    useEffect(()=>{
-        return ()=> console.log('login is unmounted');   
-},[]);
-
-const emailHandler=(a)=>{
-    setEmail(a.target.value)
-}
-const passwordHandler=(a)=>{
-    setPassword(a.target.value)
-}
-
-return(
-    <form className='formlogin' onSubmit={login}>
-        <label >Username:</label>
-        <input type="email" placeholder="Enter email" onChange={emailHandler} value={email} required/><br />
-        <label >Password:  </label>
-        <input type="password" placeholder="Enter password" onChange={passwordHandler} value={password} required/><br /><br />
-        {isvalid?  <button type="submit" >Login</button>:  <button type="submit" disabled>Login</button>}
-        
-    </form>
-);
-}
-
-
-export default Login;

@@ -6,11 +6,14 @@
 body{
     background-color: lightgrey;
     font-weight: 600;
+    width: 100%;
 }
 button{
     color: purple;
     font-weight: 600;
-    padding: 5px;
+    padding: 7px;
+    background-color: lightseagreen;
+    border-radius: 10px;
 }
 button:hover{
     color: orange;
@@ -39,4 +42,8 @@ button:hover{
 }
 .footer h4:hover{
     color: orange;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
 }

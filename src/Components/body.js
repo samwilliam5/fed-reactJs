@@ -2,13 +2,17 @@ import './body.css';
 import { useEffect, useState } from 'react';
 import FoodList from './foodlist';
 import Form from './form';
+import {useNavigate} from 'react-router-dom';
+import { useContext } from 'react';
+import { MyContext } from './Context';
+
 
 function Body(props){
     // const [foods,setfoods]=useState([...foodlist]);
     // function updateFoods(newFoods){
     //   setfoods([...foods,newFoods])
     // }
-
+    var navi=useNavigate();
     const foodList=[];
     const[foods,setFoods]=useState(foodList);
 
@@ -60,12 +64,15 @@ function Body(props){
         }
 
         const logout =()=>{
-            props.logout(false)
+            localStorage.setItem("login",false);
+            props.logout(false);
+            navi('/');
         }
-        
+        const isLoggedin=useContext(MyContext)
     return(
         <div className='container'>
-            <button onClick={logout}>Logout</button>
+            {isLoggedin==true && <button className='logouts' onClick={logout}>Logout</button>}
+            
             <Form onFormAdded={addBodyHandler}></Form>
             <div className='foodlist'>
             <FoodList foods={foods}></FoodList>

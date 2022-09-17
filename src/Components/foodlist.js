@@ -10,13 +10,14 @@ function FoodList(props){
         props.foods.length>0?(props.foods.map((foods)=>{
             return<Foods
             key={foods.restaurant} 
+            img={foods.img}
             restaurant={foods.restaurant} 
             variety={foods.variety}
             offer={foods.offer}
             price={foods.price}
             ratings={foods.ratings}>
             </Foods>
-        })):<div className='body-con'><p>No Foods Found</p></div>
+        })):<div className='body-con'><p></p></div>
     }
     </>);
 }

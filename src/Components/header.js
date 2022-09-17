@@ -1,5 +1,6 @@
 import './header.css';
 import {Outlet} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 
 function Header(){
@@ -11,11 +12,13 @@ function Header(){
                         <h2>SWIGGY</h2>
                     </div>
                     <div className="nav-bar">
-                        <a href='' className='nav'>Home</a>
-                        <a href='' className='nav'>About</a>
-                        <a href='' className='nav'>Help</a>
-                        <a href='' className='nav'>Sign-in</a>
-                        <a href='' className='nav'>Cart</a>
+                        <ul>
+                        <a href='#' className='nav'><li> Home</li></a>
+                        <a href='#' className='nav'><li>About</li></a>
+                       <a href='#' className='nav'><li>Help</li></a>
+                        <a href='#' className='nav'><li>Sign-in</li></a>
+                        <a href='#' className='nav'><li>Cart</li></a>
+                        </ul>
                     </div>
                 </div>
             </div>
